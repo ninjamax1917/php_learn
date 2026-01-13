@@ -9,4 +9,9 @@ class Image extends Tag
         parent::__construct('img');
         $this->setAttr('src', '')->setAttr('alt', '');
     }
+
+    public function __toString()
+    {
+        return parent::open();
+    }
 }
